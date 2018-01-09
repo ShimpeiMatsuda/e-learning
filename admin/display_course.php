@@ -16,7 +16,7 @@ require_once 'header.php';
  <?php		    
  				echo "<tr>";
  				echo "<td>".$row['courseid']."</td>";
- 				echo "<td>".$row['coursename']."</td>";
+ 				echo "<td>"."<a href='display_topics.php?id=".$row['courseid']."'>".$row['coursename']."</a>"."</td>";
  				echo "<td>".$row['description']."</td>";
  				echo "</td>";
  				echo "<td><input type='submit' value='Delete' name='delete'></td>";

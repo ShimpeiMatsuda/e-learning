@@ -9,7 +9,27 @@ require_once 'header.php';
 	        	<tr><td>Course name</td><td>Topic title</td><td>Topic details</td><td>Date added</td><td>Delete</td><td>Edit</td></tr> 	 
 			
 	<?php 
-	$sql="SELECT * FROM topicstbl, coursestbl WHERE coursestbl.courseid=topicstbl.courseid";
+	//this is connection with display page
+	$id = isset($_GET['id'])?(int)$_GET['id']:0;
+	$cquery = "";
+	if($id > 0){
+		$cquery = "AND coursestbl.courseid=$id";
+	}
+
+	if(isset($_POST['delete'])){
+		$sq="DELETE FROM topicstbl WHERE topicid=".$_POST['topicid'];
+		$con->query($sq);
+		if($con->query($sq)==TRUE){
+			echo "<p class='alert alert-success'>Success delete". $_POST['topicid'] . "</p>" ;
+		}else{
+			echo  "<p class='alert alert alert-danger'>Error</p>";
+		}
+	}
+	$sql="SELECT * FROM topicstbl, coursestbl 
+			WHERE coursestbl.courseid=topicstbl.courseid " . $cquery;
+			echo $sql;
+
+
 	$result=$con->query($sql);
 	if($result->num_rows > 0 ){
 		while($row = $result->fetch_assoc()){
@@ -23,23 +43,16 @@ require_once 'header.php';
  			echo "<td>".$row['date_added']."</td>";
 			echo "</td>";
 			echo "<td><input type='submit' value='Delete' name='delete'></td>";
-			echo "<td><input type='submit' value='Edit' name='edit'></td>";
+			echo "<td>"."<a href='edit_topics.php?id=".$row['topicid']."'>"."Edit"."</td>";
 			echo "</tr>";
 			?>
 			</form>
 			<?php 				
 		}
-	}  
-	if(isset($_POST['delete'])){
-		$sq="DELETE FROM topictbl WHERE topicid=".$_POST['topicid'];
-		$con->query($sq);
-		if($con->query($sq)==TRUE){
-			echo "<p class='alert alert-success'>Success delete". $_POST['courseid'] . "</p>" ;
-		}else{
-			echo  "<p class='alert alert alert-danger'>Error</p>";
-		}
 	}
-?>
+?>	  
+
+	
 		</table>
 		</div>	
 	</div>	

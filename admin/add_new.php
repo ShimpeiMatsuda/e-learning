@@ -11,12 +11,16 @@ if(isset($_POST['register'])){
 		echo "<p class='alert alert-danger'>Error</p>";
 	}
 }
+if(isset($_POST['edit'])){
+	
+
+}
 ?> 
 <div class="container">
 <div class="row">	
 	<div class="col-md-offset-4 col-md-4" >
 	   <form method="POST" action="">
-	   	<h2>Add nnew course</h2> 	
+	   	<h2>Add new course</h2> 	
 		  		<label for="exampleInputEmail1">Course Name</label>
 				<input type="text" name="couname" class="form-control" placeholder="course name"> <br>
 

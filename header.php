@@ -3,6 +3,7 @@
 <head>
 	<title>E-learning website</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="display_course.css">
 
 </head>
 <body>
@@ -22,7 +23,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"> 
         <li><a href="display.php"></a>Display</li> 
-        <li><a href="add_new.php">Add new</a></li> 
+        <li><a href="add_new.php">Add new</a></li>
+        <li><a href="display_course.php">Diplay coureses</a></li> 
+
       </ul> 
       <ul class="nav navbar-right navbar-nav">
       	<li><a href="log_out.php">Log-out</a></li>

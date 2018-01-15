@@ -11,6 +11,7 @@ if(isset($_POST['register'])){
 				VALUES('$title','$detail','$date',$course)";
 	if($con->query($sql)==TRUE){
 		echo "<p class='alert alert-success'>Make it </p>";
+		header('Location:display_topics.php');
 	}else{
 		echo "<p class='alert alert-danger'>Error</p>";
 	}
@@ -28,11 +29,22 @@ if(isset($_POST['register'])){
             	<label for="exampleInputEmail1">Date Added</label>
             	<input class="datepicker" data-date-format="yyyy-mm-dd" type="text" name="date">
             	 <br>
-				<label for="exampleInputEmail1">Course</label>
+
+            	 <label for="exampleInputEmail1">Course</label>
 				<select name="course" class="form-control">
-					    	<option value="1">English</option>
-					    	<option value="2">Mathematics</option> 
-					    	<option value="3">Science</option> 
+            <?php 
+            $sqlcourse="SELECT * FROM coursestbl";
+            $querycourse=$con->query($sqlcourse);
+            while($row = $querycourse->fetch_assoc()){
+            	 ?>	
+
+				
+					<option value="<?php echo $row['courseid']; ?>" ?>
+						<?php echo $row['coursename'] ?></option>
+			<?php  
+		 }	
+		    ?> 
+					
 				       </select><br>
 			   <button type="submit" class="btn btn-primary" name="register">Add new topic</button>
 		   </form> 

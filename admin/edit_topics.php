@@ -40,7 +40,8 @@ if(isset($_POST['update'])){
 				$coursequery = $con->query($sqlcourse);
 				while($row = $coursequery->fetch_assoc()){
 				?>
-					<option value="<?php echo $row['courseid']; ?>" <?php echo ($row['courseid']==$result['courseid']) ? 'selected="selected"' : ''; ?>><?php echo $row['coursename']; ?></option>
+
+				<option value="<?php echo $row['courseid']; ?>" <?php echo ($row['courseid']==$result['courseid']) ? 'selected="selected"' : ''; ?>><?php echo $row['coursename']; ?></option>
 				<?php
 				} 
 				?>

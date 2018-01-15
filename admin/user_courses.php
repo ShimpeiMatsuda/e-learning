@@ -5,7 +5,7 @@ require_once 'header.php';
 <div class="container">
 	<div class="table-responsive">
 		<table class="table table-responsive">
-			<tr><td>Students name</td><td>Course</td><td>Topic</td>
+			<tr><td>Students name</td><td>Course</td>
 			<td>Delete</td><td>Edit</td></tr>
 		<?php
 		 	$sql="SELECT * FROM userstbl, user_coursestbl, coursestbl
@@ -18,6 +18,10 @@ require_once 'header.php';
 				<form action="" method="POST">
 					<?php
 					echo "<tr>";
+					echo "<td>".$row['username']."</td>";
+					echo "<td>".$row['coursename']."</td>";
+					echo "<td><input type='submit' value='Delete' name ='delete'</td>";
+					echo "<td><input type='submit' value='Ed' name ='delete'</td>";
 					echo "<td>";
 					?>	
 				</form>

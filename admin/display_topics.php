@@ -27,7 +27,6 @@ require_once 'header.php';
 	}
 	$sql="SELECT * FROM topicstbl, coursestbl 
 			WHERE coursestbl.courseid=topicstbl.courseid " . $cquery;
-			echo $sql;
 
 
 	$result=$con->query($sql);

@@ -7,6 +7,7 @@ if(isset($_POST['register'])){
 	$sql="INSERT INTO coursestbl(coursename,description)VALUES('$name','$description')";
 	if($con->query($sql)==TRUE){
 		echo "<p class='alert alert-success'>Make it </p>";
+		header('Location:display_course.php');
 	}else{
 		echo "<p class='alert alert-danger'>Error</p>";
 	}
@@ -30,7 +31,7 @@ if(isset($_POST['edit'])){
 			   <button type="submit" class="btn btn-primary" name="register">Add new course</button>
 		   </form> 
 	</div>
-	<a href="display_course.php">Display courses</a>
+	
 </div>  
 </div>
 <?php

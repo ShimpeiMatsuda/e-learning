@@ -20,7 +20,7 @@ if(! isset($_SESSION['sessid'])){
 				    <dd> I am senior in Keio university. I stop out my university now, and I will graduate on March 2019.So now I can get free time until next September.In the meanwhile I went to two countries. First one is Canada. And second one is philippine. And in Japan I played tennis. So in this home page I will show you more concretly about these experiences.</dd> 
 			</div>
 			<div class="col-md-offset-1 col-md-5">
-				<img src="image/me.jpg" height="250">	    
+				<img src="images/me.jpg" height="250">	    
 			</div>
 	</div>
 </div>

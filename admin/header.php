@@ -27,7 +27,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"> 
         <li><a href="display_course.php">Display courses</a></li> 
-        <li><a href="add_new.php">Add new course</a></li> 
+        <li><a href="add_new.php">Add new course</a></li>
+        <li><a href="add_new_topic.php">Add new topic</a></li> 
         <li><a href="dislay_allclasses.php">All users' courses</a></li> 
         <li><a href="display_topics.php">Topics of courses</a></li> 
       

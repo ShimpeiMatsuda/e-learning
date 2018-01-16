@@ -32,6 +32,8 @@ require_once 'header.php';
 <link href="https://fonts.googleapis.com/css?family=Joti+One|Sedgwick+Ave+Display" rel="stylesheet">
 <div class="container">
 	<h3 style="font-family: 'Joti One', cursive;">All  Courses</h3>
+	<button type="submit" name="enroll" class="btn btn-default">Enroll
+	</button>
 	<p style="font-family: 'Joti One', cursive;
 font-family: 'Sedgwick Ave Display', cursive;">
     
@@ -48,7 +50,7 @@ font-family: 'Sedgwick Ave Display', cursive;">
 	 	<div class="col-md-3 text-center">
 	 		<div class="box">
 	 		<a href="display_topics.php?id=<?php echo $row ['courseid'];?>" ><?php echo $row['coursename']; ?><br>
-	 			<img src="image/icon.gif"><br>
+	 			<img src="images/icon.gif"><br>
 	 		<p>	<?php echo $row['description']; ?>
 	 		</p>
 

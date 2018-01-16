@@ -15,7 +15,7 @@ if(isset($_POST['update'])){
 	$date=$_POST['date'];
 	$sql= "UPDATE topicstbl SET title='$title',details='$details',
 		date_added='$date', courseid=$course WHERE topicid=$id";
-		echo $sql;
+		
 	if($con->query($sql)===TRUE){
 		echo "<p class='alert alert-success'>Success Edit</p>";
 		header('Location:display_topics.php');

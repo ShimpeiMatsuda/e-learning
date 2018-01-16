@@ -13,24 +13,30 @@ require_once 'header.php';
 		height: 50px;
 		width: 50px;
 	}
+	.box a{
+	 font-size:20px;
+
+	}
 </style>
 <div class="container"> 
 	<?php   
 	$id = isset($_GET['id'])?(int)$_GET['id']:0;   
 	$sql = "SELECT * FROM topicstbl, coursestbl
 	        WHERE coursestbl.courseid=topicstbl.courseid 
-	        AND coursestbl.courseid=$id";  
-	$result= $con->query($sql);
-	if($result->num_rows>0){
-		
-		$result2 = $result->fetch_assoc();
-		echo '<h1 class="text-center">'.$result2['coursename'].'</h1>';
+	        AND coursestbl.courseid=$id";   
+	$result= $con->query($sql); 
+	if($result->num_rows>0){ 
+		$result2 = $con->query($sql); 
+		$row2    = $result2->fetch_assoc();
+		echo '<h1 class="text-center">'.$row2['coursename']."Topics".'<button type="submit" name="enroll" class="btn btn-default pull-right">Enroll
+			</button>'.'</h1>';
 		echo '<div class="row">';
 		while($row = $result->fetch_assoc()){
 		?>	 
 		    <div class="col-md-4 text-center">
 		      	<div class="box">	
-				<a href="topic_detail.php?id=<?php echo $row['topicid'];?>">	<?php echo $row['title']; ?></a> 
+				<a href="topic_detail.php?
+				id=<?php echo $row['topicid'];?>">	<?php echo $row['title']; ?></a> 
 		 		<p><?php echo $row['date_added'];?></p>
 		 		<img src="<?php echo $row['image'];?>"/>
 	   				</div>

@@ -20,9 +20,9 @@ require_once 'header.php';
 					echo "<tr>";
 					echo "<td>".$row['username']."</td>";
 					echo "<td>".$row['coursename']."</td>";
-					echo "<td><input type='submit' value='Delete' name ='delete'</td>";
-					echo "<td><input type='submit' value='Ed' name ='delete'</td>";
-					echo "<td>";
+					echo "<td><input type='submit' value='Delete' name ='delete'></td>";
+					echo "<td><input type='submit' value='Edit' name ='delete'></td>";
+					echo "</tr>";
 					?>	
 				</form>
 				<?php

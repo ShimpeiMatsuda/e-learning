@@ -2,9 +2,9 @@
 require_once 'connect.php';
 require_once 'header.php';
 
-if(! isset($_SESSION['sessid'])){
+/*if(! isset($_SESSION['sessid'])){
 	header('Location:log_in.php');
-}
+}*/
 ?>
 <div class="container">
 	<div class="row">

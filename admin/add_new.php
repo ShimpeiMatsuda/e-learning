@@ -12,27 +12,22 @@ if(isset($_POST['register'])){
 		echo "<p class='alert alert-danger'>Error</p>";
 	}
 }
-if(isset($_POST['edit'])){
-	
-
-}
 ?> 
 <div class="container">
-<div class="row">	
-	<div class="col-md-offset-4 col-md-4" >
-	   <form method="POST" action="">
-	   	<h2>Add new course</h2> 	
-		  		<label for="exampleInputEmail1">Course Name</label>
-				<input type="text" name="couname" class="form-control" placeholder="course name"> <br>
+	<div class="row">	
+		<div class="col-md-offset-3 col-md-4" >
+		   <form method="POST" action="">
+		   	<h2>Add new course</h2> 	
+			  		<label for="exampleInputEmail1">Course Name</label>
+					<input type="text" name="couname" class="form-control" placeholder="course name"> <br>
 
-		  	<label>Course description</label>
-            	<textarea class="form-control" name="description" placeholder="Description" rows="5"></textarea>
-             	       <br>
-			   <button type="submit" class="btn btn-primary" name="register">Add new course</button>
-		   </form> 
-	</div>
-	
-</div>  
+			  	<label>Course description</label>
+	            	<textarea class="form-control" name="description" placeholder="Description" rows="5"></textarea>
+	             	       <br>
+				   <button type="submit" class="btn btn-primary" name="register">Add new course</button>
+			   </form> 
+		</div>
+	</div>  
 </div>
 <?php
 require_once 'footer.php';

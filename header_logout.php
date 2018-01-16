@@ -4,7 +4,7 @@
 	<title>E-learning website</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="display_course.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -21,29 +21,13 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav"> 
-      <li><a href="contact_me.php">Contact Me</a></li>
+     
 
-      <?php
-      if(isset($_SESSION['sessid'])){ 
-        echo '<li><a href="display_course.php">Courses</a></li>' ;
-      }
-      ?></ul>
+      </ul> 
       <ul class="nav navbar-right navbar-nav">
-        <?php 
-        if( ! isset($_SESSION['sessid'])){
-          echo '<li><a href="log_in.php">Log-in</a></li>';
-        }
-        else{ 
-          echo '<li><a href="log_out.php">Log-out</a></li>';
-        }
-        
-      	if(! isset($_SESSION['sessid'])){
-          echo '<li><a href="sign_up.php">Sign-up</a></li>';
-        }else{
-      	 }
-        ?>
+      	<li><a href="log_in.php">Log-in</a></li>
+      	<li><a href="sign_up.php">Sign-up</a></li>
       </ul>	
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div><!-- /.containerinuid -->
 </nav>

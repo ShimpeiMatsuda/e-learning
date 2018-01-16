@@ -29,14 +29,14 @@
         <li><a href="display_course.php">Display courses</a></li> 
         <li><a href="add_new.php">Add new course</a></li>
         <li><a href="add_new_topic.php">Add new topic</a></li> 
-        <li><a href="dislay_allclasses.php">All users' courses</a></li> 
-        <li><a href="display_topics.php">Topics of courses</a></li> 
+        <li><a href="user_courses.php">All users' courses</a></li> 
+        <li><a href="display_topics.php">Topics of courses</a></li>
+        <li><a href="contact.php">Contact</a></li> 
       
       </ul> 
       <ul class="nav navbar-right navbar-nav">
       	<li><a href="log_out.php">Log-out</a></li>
-      	<li><a href="sign_up.php">Sign-up</a></li>
-      </ul>	
+        </ul>	
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

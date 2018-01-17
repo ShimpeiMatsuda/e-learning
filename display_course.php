@@ -32,8 +32,6 @@ require_once 'header.php';
 <link href="https://fonts.googleapis.com/css?family=Joti+One|Sedgwick+Ave+Display" rel="stylesheet">
 <div class="container">
 	<h3 style="font-family: 'Joti One', cursive;">All  Courses</h3>
-	<button type="submit" name="enroll" class="btn btn-default">Enroll
-	</button>
 	<p style="font-family: 'Joti One', cursive;
 font-family: 'Sedgwick Ave Display', cursive;">
     

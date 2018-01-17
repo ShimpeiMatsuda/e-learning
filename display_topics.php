@@ -1,26 +1,20 @@
 <?php
 require_once 'connect.php';
 require_once 'header.php';
-?>
-<style type="text/css">
-	.box {display: block;
-		background: #f0f0f0;
-		margin-top: 15px;
-		padding: 10px;
-	}
 
-	.box img{
-		height: 50px;
-		width: 50px;
-	}
-	.box a{
-	 font-size:20px;
 
-	}
-</style>
+$id = isset($_GET['id'])?(int)$_GET['id']:0;   
+
+if(isset($_POST['enroll'])){
+	$userid=$_SESSION['sessid'];
+	$sql = "INSERT INTO user_coursestbl(user_id,course_id) VALUES($userid,$id)";
+	$con->query($sql);
+	echo "success";
+}
+?> 
 <div class="container"> 
+	<form action="" method="POST">
 	<?php   
-	$id = isset($_GET['id'])?(int)$_GET['id']:0;   
 	$sql = "SELECT * FROM topicstbl, coursestbl
 	        WHERE coursestbl.courseid=topicstbl.courseid 
 	        AND coursestbl.courseid=$id";   
@@ -38,9 +32,10 @@ require_once 'header.php';
 				<a href="topic_detail.php?
 				id=<?php echo $row['topicid'];?>">	<?php echo $row['title']; ?></a> 
 		 		<p><?php echo $row['date_added'];?></p>
-		 		<img src="<?php echo $row['image'];?>"/>
-	   				</div>
+		 		<img src="<?php echo $row['image'];?>" class="img-responsive"/>
+	   			</div>
 			</div>
+		</form>
 	 	<?php
  		}
  		echo '</div>';

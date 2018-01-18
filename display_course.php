@@ -2,36 +2,10 @@
 require_once 'connect.php';
 require_once 'header.php';
 ?>
-<style type="text/css">
-	.box{ 
-		background: #f0f0f0;
-	}
-	.box a{
-		margin-top: 15px;
-		display: block;
-		text-decoration: none;
-		padding: 20px;
-		font-size: 20px;
-		font-weight: 600;
-		color: #333;
-		height: 250px;
-		word-wrap: all;
-	}
-	.box a:hover{
-		background: #ddd;
-	}
-	.box  img{
-		margin-top: 10px;
-	}
-	.box p{
-		font-size: 12px;
-		margin-top: 10px; 
-	}
-</style>
 <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Joti+One|Sedgwick+Ave+Display" rel="stylesheet">
 <div class="container">
-	<h3 style="font-family: 'Joti One', cursive;">All  Courses</h3>
+	<h3 style="text-align:center;">All  Courses</h3>
 	<p style="font-family: 'Joti One', cursive;
 font-family: 'Sedgwick Ave Display', cursive;">
     
@@ -60,9 +34,9 @@ font-family: 'Sedgwick Ave Display', cursive;">
  		}
  	}
  ?>       
-    </div>  
+    </div>     
 </div>  
-
+<hr>
 <?php
 require_once 'footer.php';
 ?>

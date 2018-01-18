@@ -22,6 +22,8 @@ if(isset($_POST['send'])){
 <form action="" method="POST">
 	<div class="container">
 		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+		<div class="row">
 			<div class="col-md-6">
 			 	<label for="name">First Name:</label><br>
 			 	<input type="text" class="form-control" name="name" id="name">
@@ -43,18 +45,20 @@ if(isset($_POST['send'])){
 			</div>
 		</div>	
 		<br>
-	<div class="row">
-		<div class="col-md-12">	
-			<label for="message">Your Message:</label><br>
-			<textarea class="form-control" name="message" id="message" rows="5"></textarea><br>
-		</div>	
-		<div class="col-md-6">
-			<label for="exampleInputEmail1">Date Added</label>
-            	<input class="datepicker" data-date-format="yyyy-mm-dd" type="text" name="date">
-        </div>    	
-    </div>	
+		<div class="row">
+			<div class="col-md-12">	
+				<label for="message">Your Message:</label><br>
+				<textarea class="form-control" name="message" id="message" rows="5"></textarea><br>
+			</div>	
+			<div class="col-md-6">
+				<label for="exampleInputEmail1">Date Added</label>
+	            	<input class="datepicker" data-date-format="yyyy-mm-dd" type="text" name="date">
+	        </div>    	
+	    </div>	
            <br>
 		<button  class="btn btn-xm btn-primary" name="send">Send</button>
+		</div>
+	    </div>
 	</div>	
 </form>	
 

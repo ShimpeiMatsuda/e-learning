@@ -5,6 +5,37 @@
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="display_course.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+
+<style type="text/css">
+  .box{ 
+    background: #f0f0f0;
+  }
+  .box a{
+    margin-top: 15px;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    height: 250px;
+    word-wrap: all;
+  }
+  .box a:hover{
+    background: #ddd;
+  }
+  .box  img{
+    margin-top: 10px;
+  }
+  .box p{
+    font-size: 12px;
+    margin-top: 10px; 
+  }
+  .item-img{ 
+    width: 150px; 
+    margin: auto;
+  }
+</style>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
